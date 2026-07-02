@@ -17,6 +17,21 @@
         "ASPNETCORE_URLS": "https://localhost:51878;http://localhost:51879"
       },
       "distributionName": ""
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:54076/",
+      "sslPort": 44310
     }
   }
 }
