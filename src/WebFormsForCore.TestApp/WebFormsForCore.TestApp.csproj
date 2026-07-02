@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFrameworks>net8.0</TargetFrameworks>
+        <TargetFrameworks>net8.0;net48</TargetFrameworks>
         <ImplicitUsings>disable</ImplicitUsings>
         <Nullable>disable</Nullable>
         <LangVersion>14</LangVersion>
@@ -67,7 +67,7 @@
 
     <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
         <Reference Include="System.Configuration" />
-        <!--<Reference Include="System.Runtime.Serializtion" />-->
+        <!--<Reference Include="System.Runtime.Serialization" />-->
         <Reference Include="System.Web" />
         <Reference Include="System.Web.Services" />
         <Reference Include="System.Web.ApplicationServices" />
