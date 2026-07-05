@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Web;
 using System.Threading;
+using System;
 
 namespace WebFormsForCore.Test
 {
@@ -16,7 +17,7 @@ namespace WebFormsForCore.Test
 
 			var app = builder.Build();
 
-			app.UseWebForms(options => options.HandleAllRequestsWithWebForms());
+			app.UseWebForms(options => options.HandleAllRequestsWithWebForms().PhysicalPath(AppDomain.CurrentDomain.BaseDirectory));
 			
 			app.Run();
 

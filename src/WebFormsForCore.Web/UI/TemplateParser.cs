@@ -2381,9 +2381,41 @@ public abstract class TemplateParser : BaseParser, IAssemblyDependencyParser {
         if (t != null)
             return t;
 
+        // Fallback: Cerca negli assembly già caricati nel AppDomain (per assembly dinamici)
+        t = GetTypeFromLoadedAssemblies(typeName, ignoreCase);
+        if (t != null)
+            return t;
+
         if (throwOnError) {
             throw new HttpException(
                 SR.GetString(SR.Invalid_type, typeName));
+        }
+
+        return null;
+    }
+
+    /// <summary>
+    /// Cerca il tipo negli assembly già caricati nel AppDomain corrente.
+    /// Questo permette di trovare assembly caricati dinamicamente (es. da AssemblyLoadContext).
+    /// </summary>
+    private Type GetTypeFromLoadedAssemblies(string typeName, bool ignoreCase) {
+        try {
+            var comparison = ignoreCase ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal;
+
+            // Ottieni tutti gli assembly caricati
+            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies()) {
+                try {
+                    var type = assembly.GetType(typeName, false, ignoreCase);
+                    if (type != null)
+                        return type;
+                }
+                catch {
+                    // Ignora errori di ricerca in singoli assembly
+                }
+            }
+        }
+        catch {
+            // Se qualcosa va male, continua
         }
 
         return null;
