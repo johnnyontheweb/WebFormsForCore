@@ -37,21 +37,20 @@
         <OutputPath>bin</OutputPath>
     </PropertyGroup>
 
-    <ItemGroup Condition="'$(TargetFramework)' != 'net48'">
-        <!--<ProjectReference Include="..\WebFormsForCore.Drawing\WebFormsForCore.Drawing.csproj" />
+    <!--<ItemGroup Condition="'$(TargetFramework)' != 'net48'">
+        <ProjectReference Include="..\WebFormsForCore.Drawing\WebFormsForCore.Drawing.csproj" />
         <ProjectReference Include="..\WebFormsForCore.Configuration\WebFormsForCore.Configuration.csproj" />
         <ProjectReference Include="..\WebFormsForCore.Serialization.Formatters\WebFormsForCore.Serialization.Formatters.csproj" Condition="'$(TargetFramework)' != 'net48'" />
         <ProjectReference Include="..\WebFormsForCore.Web.ApplicationServices\WebFormsForCore.Web.ApplicationServices.csproj" />
         <ProjectReference Include="..\WebFormsForCore.Web.RegularExpressions\WebFormsForCore.Web.RegularExpressions.csproj" />
-        -->
-        <!--<ProjectReference Include="..\WebFormsForCore.Web\WebFormsForCore.Web.csproj" />
+        <ProjectReference Include="..\WebFormsForCore.Web\WebFormsForCore.Web.csproj" />
         <ProjectReference Include="..\WebFormsForCore.Web.Services\WebFormsForCore.Web.Services.csproj" />
         <ProjectReference Include="..\WebFormsForCore.Web.Infrastructure\WebFormsForCore.Web.Infrastructure.csproj" />
         <ProjectReference Include="..\WebFormsForCore.Web.Extensions\WebFormsForCore.Web.Extensions.csproj" />
         <ProjectReference Include="..\WebFormsForCore.Web.Optimization.WebForms\WebFormsForCore.Web.Optimization.WebForms.csproj" />
         <ProjectReference Include="..\WebFormsForCore.Web.Optimization\WebFormsForCore.Web.Optimization.csproj" />
         <ProjectReference Include="..\WebFormsForCore.WebGrease\WebFormsForCore.WebGrease.csproj" />
-        <ProjectReference Include="..\WebFormsForCore.AjaxControlToolkit\AjaxControlToolkit\AjaxControlToolkit.csproj" />-->
+        <ProjectReference Include="..\WebFormsForCore.AjaxControlToolkit\AjaxControlToolkit\AjaxControlToolkit.csproj" />
         <PackageReference Include="WebFormsForCore.Web" Version="1.6.0" />
         <PackageReference Include="WebFormsForCore.Compilers" Version="1.6.0" />
         <PackageReference Include="WebFormsForCore.Web.Services" Version="1.6.0" />
@@ -63,6 +62,24 @@
         <PackageReference Include="WebFormsForCore.AjaxControlToolkit" Version="1.6.0" />
         <PackageReference Include="WebFormsForCore.AjaxControlToolkit.StaticResources" Version="1.6.0" />
         <PackageReference Include="WebFormsForCore.Build" Version="1.6.0" ExcludeAssets="runtime" />
+    </ItemGroup>-->
+	
+	<ItemGroup>
+      <ProjectReference Include="..\WebFormsForCore.Build\WebFormsForCore.Build.csproj" />
+      <ProjectReference Include="..\WebFormsForCore.Compilers\WebFormsForCore.Compilers.csproj" />
+      <ProjectReference Include="..\WebFormsForCore.Configuration\WebFormsForCore.Configuration.csproj" />
+      <ProjectReference Include="..\WebFormsForCore.Drawing\WebFormsForCore.Drawing.csproj" />
+      <ProjectReference Include="..\WebFormsForCore.Serialization.Formatters\WebFormsForCore.Serialization.Formatters.csproj" />
+      <ProjectReference Include="..\WebFormsForCore.Web.ApplicationServices\WebFormsForCore.Web.ApplicationServices.csproj" />
+      <ProjectReference Include="..\WebFormsForCore.Web.Entity\WebFormsForCore.Web.Entity.csproj" />
+      <ProjectReference Include="..\WebFormsForCore.Web.Extensions\WebFormsForCore.Web.Extensions.csproj" />
+      <ProjectReference Include="..\WebFormsForCore.Web.Infrastructure\WebFormsForCore.Web.Infrastructure.csproj" />
+      <ProjectReference Include="..\WebFormsForCore.Web.Optimization.WebForms\WebFormsForCore.Web.Optimization.WebForms.csproj" />
+      <ProjectReference Include="..\WebFormsForCore.Web.Optimization\WebFormsForCore.Web.Optimization.csproj" />
+      <ProjectReference Include="..\WebFormsForCore.Web.RegularExpressions\WebFormsForCore.Web.RegularExpressions.csproj" />
+      <ProjectReference Include="..\WebFormsForCore.Web.Reporting\WebFormsForCore.Web.Reporting.csproj" />
+      <ProjectReference Include="..\WebFormsForCore.WebGrease\WebFormsForCore.WebGrease.csproj" />
+      <ProjectReference Include="..\WebFormsForCore.Web\WebFormsForCore.Web.csproj" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
